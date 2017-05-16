@@ -3,3 +3,5 @@
 export(connect_mdlib)
 export(get_access_types)
 export(get_survey)
+export(get_survey_list)
+importFrom(utils,str)

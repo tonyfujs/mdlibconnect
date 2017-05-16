@@ -6,6 +6,7 @@
 #'
 #' @return object of class mdlib_api
 #' @export
+#' @importFrom utils str
 #'
 
 connect_mdlib <- function(path, query = NULL, token) {
@@ -19,7 +20,7 @@ connect_mdlib <- function(path, query = NULL, token) {
   # Return useful message on error
     httr::stop_for_status(resp, task = 'complete request to Microdata library API\n')
   # CHECK: datatype is .JSON
-  if (http_type(resp) != "application/json") {
+  if (httr::http_type(resp) != "application/json") {
     stop("API did not return json", call. = FALSE)
   }
   # Parse response
