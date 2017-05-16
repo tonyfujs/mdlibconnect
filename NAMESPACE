@@ -2,3 +2,4 @@
 
 export(connect_mdlib)
 export(get_access_types)
+export(get_survey)
