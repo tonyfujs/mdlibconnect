@@ -1,0 +1,42 @@
+---
+title: "Getting started with mdlibconnect"
+author: "Tony Fujs"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Getting started with mdlibconnect}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+NOT_CRAN <- identical(tolower(Sys.getenv("NOT_CRAN")), "true")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  purl = NOT_CRAN,
+  eval = NOT_CRAN
+)
+## this is nice during development = on github
+## this is not so nice for preparing vignettes for CRAN
+#options(knitr.table.format = 'markdown')
+```
+
+
+### Before you start: Get your API KEY
+You can get your API KEY by:   
+
+1. Visiting the [following link](http://microdatalibqa.worldbank.org/index.php/auth/api_keys) 
+1. Loging using your World Bank SecureID token
+1. Clicking the __create new key__ button.
+
+### List all available surveys
+```{r}
+library(mdlibconnect)
+get_survey_list(token = Sys.getenv('mdlib_token'))
+```
+
+
+
