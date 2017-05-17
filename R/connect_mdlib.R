@@ -15,8 +15,7 @@ connect_mdlib <- function(path, query = NULL, token) {
   # Send request to API
   resp <- httr::GET(url,
             httr::add_headers(.headers = c('X-API-KEY' = token)),
-            httr::accept_json(),
-            httr::progress())
+            httr::accept_json())
   # Return useful message on error
     httr::stop_for_status(resp, task = 'complete request to Microdata library API\n')
   # CHECK: datatype is .JSON
