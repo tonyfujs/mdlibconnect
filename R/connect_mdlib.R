@@ -24,7 +24,7 @@ connect_mdlib <- function(path, query = NULL, token) {
     stop("API did not return json", call. = FALSE)
   }
   # Parse response
-  parsed <- jsonlite::fromJSON(content(resp, "text"), simplifyVector = FALSE)
+  parsed <- jsonlite::fromJSON(httr::content(resp, "text"), simplifyVector = FALSE)
 
   # Organize information
   out <- structure(
