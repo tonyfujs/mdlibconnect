@@ -4,14 +4,17 @@
 \alias{connect_mdlib}
 \title{connect_mdlib}
 \usage{
-connect_mdlib(path, query = NULL, token)
+connect_mdlib(path, query = NULL, token,
+  root = "http://microdatalib.worldbank.org")
 }
 \arguments{
 \item{path}{character: path to send request}
 
 \item{query}{character}
 
-\item{token}{character: access token to be opbtained from \url{http://microdatalibqa.worldbank.org/apidocumentation/}}
+\item{token}{character: access token to be obtained from \url{http://microdatalib.worldbank.org/index.php/auth/api_keys}}
+
+\item{root}{character: the root url that hosts the API}
 }
 \value{
 object of class mdlib_api
