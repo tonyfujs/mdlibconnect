@@ -15,7 +15,8 @@ connect_mdlib <- function(path, query = NULL, token, root = "http://microdatalib
   url <- httr::modify_url(root, path = path, query = query)
   # Send request to API
   resp <- httr::GET(url,
-            httr::add_headers(.headers = c('X-API-KEY' = token)),
+            httr::add_headers(.headers = c('X-API-KEY' = token,
+                                           'charset' = "utf-8")),
             httr::accept_json())
   # Return useful message on error
     httr::stop_for_status(resp, task = 'complete request to Microdata library API\n')
