@@ -7,8 +7,8 @@
 #'
 
 get_survey_list <- function(token){
-  out <- connect_mdlib(path = 'index.php/api/v2/catalog/list', token = token)
-  out <- out$content$studies
+  out <- connect_mdlib(path = 'index.php/api/catalog/search?ps=10000', token = token)
+  out <- out$content$result$rows
 
   return(out)
 }

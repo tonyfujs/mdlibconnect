@@ -8,6 +8,7 @@
 #' @export
 #'
 
+#TODO: NEED TO FOLLOWUP WITH MEHMOOD.
 get_variables_list <- function(id, datafile_id, token){
   path <- paste0('index.php/api/v2/metadata/datafile_variables/', id, '/', datafile_id)
   out <- connect_mdlib(path = path, token = token)

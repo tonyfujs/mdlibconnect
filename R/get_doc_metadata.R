@@ -7,6 +7,7 @@
 #' @export
 #'
 
+#TODO: NEED TO FOLLOWUP WITH MEHMOOD
 get_doc_metadata <- function(id, token){
   path <- paste0('index.php/api/v2/metadata/doc_dscr/', id)
   out <- connect_mdlib(path = path, token = token)
