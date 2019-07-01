@@ -7,10 +7,10 @@
 #'
 
 get_public_survey_list <- function(token){
-  out <- connect_mdlib(path = 'index.php/api/v2/catalog/list',
+  out <- connect_mdlib(path = 'index.php/api/catalog/search?ps=10000',
                        token = token,
-                       root = 'http://microdata.worldbank.org/index.php/api/v2/catalog/list')
-  out <- out$content$studies
+                       root = 'http://microdata.worldbank.org/')
+  out <- out$content$result$rows
 
   return(out)
 }
