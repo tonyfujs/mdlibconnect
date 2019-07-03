@@ -2,8 +2,11 @@
 
 export(connect_mdlib)
 export(get_access_types)
+export(get_datafiles_list)
+export(get_doc_metadata)
 export(get_public_survey_list)
 export(get_survey)
 export(get_survey_list)
 export(get_survey_metadata)
+export(get_variables_list)
 importFrom(utils,str)
