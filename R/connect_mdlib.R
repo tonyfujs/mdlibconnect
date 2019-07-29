@@ -10,9 +10,7 @@
 #' @importFrom utils str
 #'
 
-#TODO: NEED TO REVERT BACK
-# connect_mdlib <- function(path, query = NULL, token, root = "http://microdatalib.worldbank.org") {
-connect_mdlib <- function(path, query = NULL, token, root = "https://microdata.worldbank.org") {
+connect_mdlib <- function(path, query = NULL, token, root = "http://microdatalib.worldbank.org") {
   # Build request URL
   url <- httr::modify_url(root, path = path, query = query)
   # Send request to API
