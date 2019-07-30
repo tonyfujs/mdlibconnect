@@ -8,7 +8,7 @@
 #'
 
 get_survey_metadata <- function(id, token){
-  path  <- paste0('index.php/api/catalog/find_by_id/', id)
+  path  <- paste0('index.php/api/catalog/', id, '?id_format=id&format=json')
   out   <- connect_mdlib(path = path, token = token)
   out   <- out$content$dataset$metadata
 

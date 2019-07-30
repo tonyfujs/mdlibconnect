@@ -8,9 +8,7 @@
 #'
 
 get_datafiles_list <- function(id, token){
-  #TODO: NEED TO CONFIRM WITH MEHMOOD. Currently the API returns
-  # Doesn't accept numeric id
-  path  <- paste0('index.php/api/catalog/', id, '/data_files')
+  path  <- paste0('index.php/api/catalog/', id, '/data_files?id_format=id&format=json')
   out   <- connect_mdlib(path = path, token = token)
   out   <- out$content$datafiles
 
