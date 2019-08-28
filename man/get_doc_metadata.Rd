@@ -4,10 +4,12 @@
 \alias{get_doc_metadata}
 \title{get_doc_metadata}
 \usage{
-get_doc_metadata(id, token)
+get_doc_metadata(id, datafile_id, token)
 }
 \arguments{
 \item{id}{numeric: Survey Unique ID}
+
+\item{datafile_id}{character: Data file Unique ID}
 
 \item{token}{character}
 }
