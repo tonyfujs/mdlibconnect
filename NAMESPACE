@@ -2,6 +2,7 @@
 
 export(connect_mdlib)
 export(get_access_types)
+export(get_data_dictionary)
 export(get_datafiles_list)
 export(get_doc_metadata)
 export(get_public_survey_list)

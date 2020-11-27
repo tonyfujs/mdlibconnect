@@ -4,8 +4,12 @@
 \alias{connect_mdlib}
 \title{connect_mdlib}
 \usage{
-connect_mdlib(path, query = NULL, token,
-  root = "http://microdatalib.worldbank.org")
+connect_mdlib(
+  path,
+  query = NULL,
+  token,
+  root = "http://microdatalib.worldbank.org"
+)
 }
 \arguments{
 \item{path}{character: path to send request}
