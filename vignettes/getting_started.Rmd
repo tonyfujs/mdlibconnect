@@ -32,10 +32,14 @@ You can get your API KEY by:
 1. Loging using your World Bank SecureID token
 1. Clicking the __create new key__ button.
 
+API documentation can be accessed [here](http://microdatalibqa.worldbank.org/apidocumentation/#api-Metadata-datafile_variables)
+
 ### List all available surveys
 ```{r}
-library(mdlibconnect)
-get_survey_list(token = Sys.getenv('mdlib_token'))
+devtools::load_all()
+response <- get_survey_list(token = Sys.getenv('mdlib_token'))
+str(response, max.level = 2, list.len = 3)
+
 ```
 
 
