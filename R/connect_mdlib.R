@@ -2,7 +2,7 @@
 #'
 #' @param path character: path to send request
 #' @param query character
-#' @param token character: access token to be obtained from \url{http://microdatalib.worldbank.org/index.php/auth/api_keys}
+#' @param token character: access token to be obtained from \url{https://microdatalib.worldbank.org/index.php/auth/api_keys}
 #' @param root character: the root url that hosts the API
 #'
 #' @return object of class mdlib_api
@@ -10,7 +10,7 @@
 #' @importFrom utils str
 #'
 
-connect_mdlib <- function(path, query = NULL, token, root = "http://microdatalib.worldbank.org") {
+connect_mdlib <- function(path, query = NULL, token, root = "https://microdatalib.worldbank.org") {
   # Build request URL
   url <- httr::modify_url(root, path = path, query = query)
   # Send request to API
@@ -43,7 +43,7 @@ connect_mdlib <- function(path, query = NULL, token, root = "http://microdatalib
 
 
 print.mdlib_api <- function(x, ...) {
-  cat("<http://microdatalibqa.worldbank.org/", x$path, ">\n", sep = "")
+  cat("<https://microdatalibqa.worldbank.org/", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)
 }

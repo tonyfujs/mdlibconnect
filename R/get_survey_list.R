@@ -18,7 +18,7 @@ get_survey_list <- function(token){
 
 get_number_of_surveys <- function(token) {
   # Should be better integrated with the other functions (URL should not be hard coded)
-  url <- "http://microdatalib.worldbank.org/index.php/api/catalog/search?ps=1"
+  url <- "https://microdatalib.worldbank.org/index.php/api/catalog/search?ps=1"
 
   resp <- httr::GET(url,
                     httr::add_headers(.headers = c('X-API-KEY' = token,
