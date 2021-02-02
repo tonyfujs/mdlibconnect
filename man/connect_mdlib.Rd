@@ -8,7 +8,7 @@ connect_mdlib(
   path,
   query = NULL,
   token,
-  root = "http://microdatalib.worldbank.org"
+  root = "https://microdatalib.worldbank.org"
 )
 }
 \arguments{
@@ -16,7 +16,7 @@ connect_mdlib(
 
 \item{query}{character}
 
-\item{token}{character: access token to be obtained from \url{http://microdatalib.worldbank.org/index.php/auth/api_keys}}
+\item{token}{character: access token to be obtained from \url{https://microdatalib.worldbank.org/index.php/auth/api_keys}}
 
 \item{root}{character: the root url that hosts the API}
 }
